@@ -156,7 +156,7 @@ class MicrosoftAuthenticationBackend(ModelBackend):
             first_name, last_name = "", ""
             if fullname is not None:
                 try:
-                    first_name, last_name = fullname.split(" ", 1)
+                    last_name, first_name = fullname.split(", ", 1)
                 except ValueError:
                     firstname = fullname
 
